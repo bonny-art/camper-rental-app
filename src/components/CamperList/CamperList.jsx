@@ -1,9 +1,8 @@
 import React from 'react';
 
-import campers from '../../db/campers';
 import { CamperCard } from 'components/CamperCard/CamperCard';
 
-export const CamperList = () => {
+export const CamperList = ({ campers }) => {
   return (
     <ul>
       {campers.map(c => (
