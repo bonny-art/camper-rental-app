@@ -10,7 +10,7 @@ export const LocationFilter = () => {
     dispatch(campersActions.setLocationFilterAction(location));
   };
 
-  const suggestions = useSelector(campersSelectors.getUniqueLocations);
+  const suggestions = useSelector(campersSelectors.selectUniqueLocations);
 
   return (
     <div>

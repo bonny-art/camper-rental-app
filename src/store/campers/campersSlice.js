@@ -9,9 +9,11 @@ const initialState = {
   favoriteItems: [],
   isLoading: false,
   error: '',
-  locationFilter: '',
-  equipmentFilter: [],
-  typeFilter: '',
+  filters: {
+    locationFilter: '',
+    equipmentFilter: [],
+    typeFilter: '',
+  },
 };
 
 const createSlice = buildCreateSlice({
@@ -57,13 +59,46 @@ const campersSlice = createSlice({
     selectCampers: campersHandlers.handleCampers,
     selectIsLoading: campersHandlers.handleIsLoading,
     selectError: campersHandlers.handleError,
-    selectFavoriteItems: campersHandlers.handleFavoriteItems,
+    selectFavoriteCampers: campersHandlers.handleFavoriteCampers,
 
-    getUniqueLocations: createSelector(
+    selectUniqueLocations: createSelector(
       [campersHandlers.handleCampers],
       items => {
         const locations = items.map(item => item.location);
         return [...new Set(locations)];
+      }
+    ),
+
+    selectFilteredCampers: createSelector(
+      [campersHandlers.handleCampers, campersHandlers.handleFilters],
+      (campers, { locationFilter, equipmentFilter, typeFilter }) => {
+        return campers.filter(camper => {
+          const matchesLocation =
+            locationFilter === '' || camper.location === locationFilter;
+
+          const matchesType = typeFilter === '' || camper.form === typeFilter;
+
+          const matchesEquipment =
+            equipmentFilter.length === 0 ||
+            equipmentFilter.every(equipment => {
+              switch (equipment) {
+                case 'AC':
+                  return camper.details.airConditioner > 0;
+                case 'Automatic':
+                  return camper.transmission === 'automatic';
+                case 'Kitchen':
+                  return camper.details.kitchen > 0;
+                case 'TV':
+                  return camper.details.TV > 0;
+                case 'Shower/WC':
+                  return camper.details.shower > 0 || camper.details.toilet > 0;
+                default:
+                  return false;
+              }
+            });
+
+          return matchesLocation && matchesType && matchesEquipment;
+        });
       }
     ),
   },

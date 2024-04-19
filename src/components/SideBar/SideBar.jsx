@@ -9,7 +9,7 @@ import { campersActions, campersSelectors } from 'store/campers/campersSlice';
 export const SideBar = () => {
   const dispatch = useDispatch();
 
-  const suggestions = useSelector(campersSelectors.getUniqueLocations);
+  const suggestions = useSelector(campersSelectors.selectUniqueLocations);
 
   const [location, setLocation] = useState('');
   const [equipment, setEquipment] = useState([]);

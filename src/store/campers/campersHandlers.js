@@ -19,22 +19,25 @@ export const handleAddToFavoriteItems = (state, { payload }) => {
 };
 
 export const handleRemoveFromFavoriteItems = (state, { payload }) => {
-  state.favoriteItems = state.favoriteItems.filter(id => id !== payload);
+  state.favoriteItems = state.favoriteItems.filter(
+    camper => camper._id !== payload
+  );
 };
 
 export const handleSetFilters = (state, { payload }) => {
-  state.locationFilter = payload.location;
-  state.equipmentFilter = payload.equipment;
-  state.typeFilter = payload.type;
+  state.filters.locationFilter = payload.location;
+  state.filters.equipmentFilter = payload.equipment;
+  state.filters.typeFilter = payload.type;
 };
 
 export const handleClearFilters = state => {
-  state.locationFilter = '';
-  state.equipmentFilter = [];
-  state.typeFilter = '';
+  state.filters.locationFilter = '';
+  state.filters.equipmentFilter = [];
+  state.filters.typeFilter = '';
 };
 
 export const handleCampers = state => state.items;
 export const handleIsLoading = state => state.isLoading;
 export const handleError = state => state.error;
-export const handleFavoriteItems = state => state.favoriteItems;
+export const handleFavoriteCampers = state => state.favoriteItems;
+export const handleFilters = state => state.filters;
