@@ -26,7 +26,6 @@ import { useLocation } from 'react-router-dom';
 
 export const CamperCard = ({ camper }) => {
   const endpoint = useLocation().pathname.slice(1);
-  console.log('🚀 ~ endpoint:', endpoint);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 

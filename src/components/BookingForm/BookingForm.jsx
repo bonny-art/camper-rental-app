@@ -17,6 +17,7 @@ import {
   Title,
 } from './BookingForm.styled';
 import { Button } from 'components/Button/Button';
+import { toastSuccess } from 'components/Home/notifications';
 
 const today = () => {
   const now = new Date();
@@ -41,14 +42,17 @@ export const BookingForm = () => {
     bookingDate: null,
     comment: '',
   };
+  const title = 'Message send successfully!';
+  const message = 'Our manager will contact you shortly!';
 
   const handleSubmit = (values, actions) => {
     console.log(values);
+    toastSuccess(title, message);
     actions.setSubmitting(false);
 
     setTimeout(() => {
       window.location.reload();
-    }, 1000);
+    }, 3000);
   };
 
   return (
