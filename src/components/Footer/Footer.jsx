@@ -5,9 +5,7 @@ import {
   CopyrightContainer,
   CopyrightSection,
   Logo,
-  Nav,
   NavSection,
-  Section,
 } from './Footer.styled';
 import { Link } from 'react-router-dom';
 import sprite from '../../assets/sprite.svg';

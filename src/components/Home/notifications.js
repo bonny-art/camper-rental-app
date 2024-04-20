@@ -1,4 +1,3 @@
-import { theme } from 'styles';
 import Swal from 'sweetalert2';
 
 export const toastSuccess = (title, message) => {

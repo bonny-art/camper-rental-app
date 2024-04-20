@@ -3,7 +3,7 @@ import { CamperList } from 'components/CamperList/CamperList';
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { campersSelectors } from '../../store/campers/campersSlice';
-import { ButtonBox, CampersBox, Container } from './Campers.styled';
+import { ButtonBox, Container } from './Campers.styled';
 import { scrollDown } from 'helpers/helpers';
 import { Message } from 'components/Message/Message';
 

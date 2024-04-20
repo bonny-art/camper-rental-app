@@ -6,8 +6,6 @@ import {
   Container,
   HeroSection,
   Icon,
-  IconBox,
-  ImageBox,
   Img,
   ImgCover,
   TextBox,
