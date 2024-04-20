@@ -12,7 +12,8 @@ export const ReviewsList = ({ reviews }) => {
         ))
       ) : (
         <Review>
-          There are no reviews for this camper yet. Yours can be the first!
+          There are no reviews for this camper yet. Try it and write the first
+          review!
         </Review>
       )}
     </ReviewsContainer>

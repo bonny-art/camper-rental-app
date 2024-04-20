@@ -7,11 +7,7 @@ const FavoritesPage = () => {
   const campers = useSelector(campersSelectors.selectCampers);
   console.log('🚀 ~ campers:', campers);
 
-  return (
-    <div>
-      <Favorites />
-    </div>
-  );
+  return <Favorites />;
 };
 
 export default FavoritesPage;

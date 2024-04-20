@@ -12,10 +12,7 @@ import {
 } from './Features.styled';
 
 import sprite from '../../assets/sprite.svg';
-
-function capitalizeFirstLetter(str) {
-  return str.charAt(0).toUpperCase() + str.slice(1);
-}
+import { capitalizeFirstLetter } from 'helpers/helpers';
 
 export const Features = ({ camper }) => {
   const {

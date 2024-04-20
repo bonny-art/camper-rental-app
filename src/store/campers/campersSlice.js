@@ -72,6 +72,7 @@ const campersSlice = createSlice({
     selectFilteredCampers: createSelector(
       [campersHandlers.handleCampers, campersHandlers.handleFilters],
       (campers, { locationFilter, equipmentFilter, typeFilter }) => {
+        console.log('🚀 ~ typeFilter:', typeFilter);
         return campers.filter(camper => {
           const matchesLocation =
             locationFilter === '' || camper.location === locationFilter;

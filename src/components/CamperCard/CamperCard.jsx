@@ -4,8 +4,25 @@ import React, { useState } from 'react';
 import { campersSelectors } from '../../store/campers/campersSlice';
 import { useSelector } from 'react-redux';
 import { HiOutlineLocationMarker } from 'react-icons/hi';
-import { FaStar } from 'react-icons/fa';
+import sprite from '../../assets/sprite.svg';
 import { CamperModal } from 'components/CamperModal/CamperModal';
+import {
+  AttributesItem,
+  AttributesRow,
+  Container,
+  Description,
+  FeaturesContainer,
+  Head,
+  Icon,
+  IconWithStroke,
+  ImageBox,
+  InfoBox,
+  Label,
+  MapPin,
+  Star,
+  TitleRow,
+} from './CamperCard.styled';
+import { capitalizeFirstLetter } from 'helpers/helpers';
 
 export const CamperCard = ({ camper }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -29,6 +46,7 @@ export const CamperCard = ({ camper }) => {
   const isInFavorite = favoriteItems.some(item => item._id === _id);
 
   const hasKitchen = kitchen > 0;
+  const hasBed = beds > 0;
   const hasAC = airConditioner > 0;
 
   const openModal = () => {
@@ -41,44 +59,98 @@ export const CamperCard = ({ camper }) => {
 
   return (
     <>
-      <li key={_id}>
-        <div>
+      <Container key={_id}>
+        <ImageBox>
           <img src={gallery[0]} alt={name} />
-        </div>
+        </ImageBox>
 
-        <div>
+        <InfoBox>
+          <Head>
+            <TitleRow>
+              <h2>{name}</h2>
+
+              <div>
+                <p>{`€${price}.00`}</p>
+                <FavoriteButton camper={camper} isInFavorite={isInFavorite} />
+              </div>
+            </TitleRow>
+
+            <AttributesRow>
+              <AttributesItem>
+                <Star>
+                  <use href={`${sprite}#star`} />
+                </Star>
+                <p>{`${rating}(${reviews.length} Reviews)`}</p>
+              </AttributesItem>
+
+              <AttributesItem>
+                <MapPin>
+                  <use href={`${sprite}#map-pin`} />
+                </MapPin>
+                <p>{location}</p>
+              </AttributesItem>
+            </AttributesRow>
+          </Head>
+
+          <Description>{description}</Description>
+
+          <FeaturesContainer>
+            <Label>
+              <Icon>
+                <use xlinkHref={`${sprite}#adults`}></use>
+              </Icon>
+              <p>{`${adults} adults`}</p>
+            </Label>
+
+            <Label>
+              <IconWithStroke>
+                <use xlinkHref={`${sprite}#transmission`}></use>
+              </IconWithStroke>
+              <p>{capitalizeFirstLetter(transmission)}</p>
+            </Label>
+
+            <Label>
+              <Icon>
+                <use xlinkHref={`${sprite}#engine`}></use>
+              </Icon>
+              <p>{capitalizeFirstLetter(engine)}</p>
+            </Label>
+
+            {hasKitchen && (
+              <Label>
+                <IconWithStroke>
+                  <use xlinkHref={`${sprite}#kitchen`}></use>
+                </IconWithStroke>
+                <p>Kitchen</p>
+              </Label>
+            )}
+
+            {hasBed && (
+              <Label>
+                <IconWithStroke>
+                  <use xlinkHref={`${sprite}#bed`}></use>
+                </IconWithStroke>
+                <p>{`${beds} bed${beds > 1 ? 's' : ''}`}</p>
+              </Label>
+            )}
+
+            {hasAC && (
+              <Label>
+                <Icon>
+                  <use xlinkHref={`${sprite}#ac`}></use>
+                </Icon>
+                <p>AC</p>
+              </Label>
+            )}
+          </FeaturesContainer>
+
           <div>
-            <h2>{name}</h2>
-
-            <div>
-              <p>{price}</p>
-              <FavoriteButton camper={camper} isInFavorite={isInFavorite} />
-            </div>
+            <Button className="show" type="button" onClick={openModal}>
+              Show more
+            </Button>
           </div>
-
-          <div>
-            <FaStar value={{ color: '#FFC531' }} />
-            <p>{`${rating}(${reviews.length} Reviews)`}</p>
-            <HiOutlineLocationMarker />
-            <p>{location}</p>
-          </div>
-
-          <p>{description}</p>
-
-          <div>
-            <div>{`${adults} adults`}</div>
-            <div>{transmission}</div>
-            <div>{engine}</div>
-            {hasKitchen && <div>Kitchen</div>}
-            <div>{`${beds} beds`}</div>
-            {hasAC && <div>AC</div>}
-          </div>
-
-          <Button type="button" onClick={openModal}>
-            Show more
-          </Button>
-        </div>
-      </li>
+        </InfoBox>
+      </Container>
       <CamperModal
         isModalOpen={isModalOpen}
         closeModal={closeModal}

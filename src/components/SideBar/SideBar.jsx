@@ -5,6 +5,16 @@ import { RadioFilter } from 'components/RadioFilter/RadioFilter';
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { campersActions, campersSelectors } from 'store/campers/campersSlice';
+import {
+  BigFilterBox,
+  ButtonsBox,
+  Container,
+  FilterBox,
+  FilterTitle,
+  Filters,
+  LocationBox,
+} from './SideBar.styled';
+import { mapName } from 'helpers/helpers';
 
 export const SideBar = () => {
   const dispatch = useDispatch();
@@ -34,7 +44,7 @@ export const SideBar = () => {
       const payload = {
         location,
         equipment,
-        type,
+        type: mapName(type),
       };
 
       dispatch(campersActions.setFiltersAction(payload));
@@ -48,35 +58,55 @@ export const SideBar = () => {
   };
 
   return (
-    <div>
-      <div>
-        <h4>Location</h4>
-        <AutocompleteInput
-          suggestions={suggestions}
-          onLocationSelect={handleLocationSelect}
-          isCleared={isCleared}
-          setIsCleared={setIsCleared}
-        />
-      </div>
-      <h3>Filters</h3>
-      <div>
-        <h4>Vehicle equipment</h4>
-        <CheckboxFilter
-          onEquipmentChange={handleEquipmentChange}
-          isCleared={isCleared}
-          setIsCleared={setIsCleared}
-        />
-      </div>
-      <div>
-        <h4>Vehicle type</h4>
-        <RadioFilter
-          onTypeChange={handleTypeChange}
-          isCleared={isCleared}
-          setIsCleared={setIsCleared}
-        />
-      </div>
-      <Button onClick={() => handleButtonClick('search')}>Search</Button>
-      <Button onClick={() => handleButtonClick('clear')}>Clear</Button>
-    </div>
+    <Container>
+      <Filters>
+        <LocationBox>
+          <h3>Location</h3>
+          <AutocompleteInput
+            suggestions={suggestions}
+            onLocationSelect={handleLocationSelect}
+            isCleared={isCleared}
+            setIsCleared={setIsCleared}
+          />
+        </LocationBox>
+
+        <BigFilterBox>
+          <h3>Filters</h3>
+
+          <FilterBox>
+            <FilterTitle>
+              <h4>Vehicle equipment</h4>
+            </FilterTitle>
+
+            <CheckboxFilter
+              onEquipmentChange={handleEquipmentChange}
+              isCleared={isCleared}
+              setIsCleared={setIsCleared}
+            />
+          </FilterBox>
+        </BigFilterBox>
+
+        <FilterBox>
+          <FilterTitle>
+            <h4>Vehicle type</h4>
+          </FilterTitle>
+
+          <RadioFilter
+            onTypeChange={handleTypeChange}
+            isCleared={isCleared}
+            setIsCleared={setIsCleared}
+          />
+        </FilterBox>
+      </Filters>
+
+      <ButtonsBox>
+        <Button className="form" onClick={() => handleButtonClick('search')}>
+          Search
+        </Button>
+        <Button className="clear" onClick={() => handleButtonClick('clear')}>
+          Clear
+        </Button>
+      </ButtonsBox>
+    </Container>
   );
 };

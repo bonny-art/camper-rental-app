@@ -77,6 +77,11 @@ export const FieldStyled = styled(Field)`
   &:focus-visible {
     outline: none;
   }
+
+  &::placeholder {
+    line-height: 1.25;
+    color: ${({ theme }) => theme.colors.blackTransp06};
+  }
 `;
 
 export const DatePickerStyled = styled(DatePicker)`
@@ -90,6 +95,11 @@ export const DatePickerStyled = styled(DatePicker)`
 
   &:focus-visible {
     outline: none;
+  }
+
+  &::placeholder {
+    line-height: 1.25;
+    color: ${({ theme }) => theme.colors.blackTransp06};
   }
 `;
 
@@ -106,5 +116,10 @@ export const FieldStyledComment = styled(Field)`
 
   &:focus-visible {
     outline: none;
+  }
+
+  &::placeholder {
+    line-height: 1.25;
+    color: ${({ theme }) => theme.colors.blackTransp06};
   }
 `;

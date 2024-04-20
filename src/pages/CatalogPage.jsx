@@ -1,5 +1,4 @@
 import { Catalog } from 'components/Catalog/Catalog';
-import { SideBar } from 'components/SideBar/SideBar';
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { campersActions } from 'store/campers/campersSlice';
@@ -11,11 +10,6 @@ const CatalogPage = () => {
     dispatch(campersActions.getCampersAction());
   }, [dispatch]);
 
-  return (
-    <>
-      <SideBar />
-      <Catalog />
-    </>
-  );
+  return <Catalog />;
 };
 export default CatalogPage;

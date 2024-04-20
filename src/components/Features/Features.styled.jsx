@@ -69,7 +69,7 @@ export const DetailsContainer = styled.div`
 `;
 
 export const Title = styled.div`
-  border-bottom: 1px solid ${({ theme }) => theme.colors.blackTransparent};
+  border-bottom: 1px solid ${({ theme }) => theme.colors.blackTransp02};
 
   h3 {
     display: block;

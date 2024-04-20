@@ -1,14 +1,14 @@
 import React from 'react';
 
 import { CamperCard } from 'components/CamperCard/CamperCard';
+import { Container } from './CamperList.styled';
 
 export const CamperList = ({ campers }) => {
-  console.log('🚀 ~ campers:', campers);
   return (
-    <ul>
+    <Container>
       {campers.map(c => (
         <CamperCard key={c._id} camper={c} />
       ))}
-    </ul>
+    </Container>
   );
 };

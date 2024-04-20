@@ -10,8 +10,10 @@ export const theme = Object.freeze({
     scrollbar: '#D9D9D9',
     white: '#ffffff',
 
-    blackTransparent: '#10182833',
-    grayTransparent: '#47546733',
+    blackTransp02: '#10182833',
+    blackTransp06: '#10182899',
+    grayTransp: '#47546733',
+    filterLine: '#10182819',
   },
 
   fontSizes: {

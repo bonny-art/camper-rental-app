@@ -9,7 +9,6 @@ import sprite from '../../assets/sprite.svg';
 import {
   Card,
   DatePickerStyled,
-  ErrorStyled,
   FieldStyled,
   FieldStyledComment,
   FieldWrapper,
@@ -123,7 +122,7 @@ export const BookingForm = () => {
             </Inputs>
 
             <div>
-              <Button type="submit" className="accent">
+              <Button type="submit" className="form">
                 Send
               </Button>
             </div>

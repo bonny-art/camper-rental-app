@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { HiOutlineLocationMarker } from 'react-icons/hi';
+import sprite from '../../assets/sprite.svg';
+import { Container } from './AutocompleteInput.styled';
 
 export const AutocompleteInput = ({
   suggestions,
@@ -24,20 +25,22 @@ export const AutocompleteInput = ({
   };
 
   return (
-    <div>
-      <HiOutlineLocationMarker />
+    <Container>
       <input
         type="text"
         list="suggestions"
         onChange={handleInputChange}
         value={userInput}
-        placeholder="Type location to filter..."
+        placeholder="City"
       />
       <datalist id="suggestions">
         {suggestions.map((suggestion, index) => (
           <option key={index} value={suggestion} />
         ))}
       </datalist>
-    </div>
+      <svg>
+        <use href={`${sprite}#map-pin`} />
+      </svg>
+    </Container>
   );
 };

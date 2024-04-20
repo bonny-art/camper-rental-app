@@ -2,11 +2,11 @@ import { Button } from 'components/Button/Button';
 import { CamperList } from 'components/CamperList/CamperList';
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
-import { campersSelectors } from 'store/campers/campersSlice';
-import { ButtonBox, Container, Section } from './Favorites.styled';
+import { campersSelectors } from '../../store/campers/campersSlice';
+import { ButtonBox, Container } from './Campers.styled';
 
-export const Favorites = () => {
-  const allCampers = useSelector(campersSelectors.selectFavoriteCampers);
+export const Campers = () => {
+  const allCampers = useSelector(campersSelectors.selectFilteredCampers);
 
   const [visibleCampersNumber, setVisibleCampersNumber] = useState(4);
 
@@ -28,17 +28,14 @@ export const Favorites = () => {
 
   return (
     <Container>
-      <Section>
-        <CamperList campers={visibleCampers} />
-
-        <ButtonBox>
-          {canLoadMore && (
-            <Button className="load" onClick={handleLoadMore}>
-              Load more
-            </Button>
-          )}
-        </ButtonBox>
-      </Section>
+      <CamperList campers={visibleCampers} />
+      <ButtonBox>
+        {canLoadMore && (
+          <Button className={'load'} onClick={handleLoadMore}>
+            Load more
+          </Button>
+        )}
+      </ButtonBox>
     </Container>
   );
 };

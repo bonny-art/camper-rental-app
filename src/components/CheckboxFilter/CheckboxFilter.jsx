@@ -1,4 +1,14 @@
 import React, { useEffect, useState } from 'react';
+import sprite from '../../assets/sprite.svg';
+import {
+  CustomInput,
+  Form,
+  Icon,
+  Input,
+  Label,
+  Wrapper,
+} from './CheckboxFilter.styled';
+import { mapName } from 'helpers/helpers';
 
 export const CheckboxFilter = ({
   onEquipmentChange,
@@ -38,19 +48,30 @@ export const CheckboxFilter = ({
   };
 
   const createCheckbox = equipment => (
-    <label key={equipment}>
-      {equipment}
-      <input
+    <Wrapper key={equipment}>
+      <Input
         type="checkbox"
+        id={equipment}
         checked={selectedEquipment.includes(equipment)}
         onChange={() => handleCheckboxChange(equipment)}
       />
-    </label>
+      <Label htmlFor={equipment}>
+        <CustomInput
+          className={mapName(equipment)}
+          isSelected={selectedEquipment.includes(equipment)}
+        >
+          <Icon>
+            <use href={`${sprite}#${mapName(equipment)}`} />
+          </Icon>
+          <p>{equipment}</p>
+        </CustomInput>
+      </Label>
+    </Wrapper>
   );
 
   return (
-    <div>
+    <Form>
       {['AC', 'Automatic', 'Kitchen', 'TV', 'Shower/WC'].map(createCheckbox)}
-    </div>
+    </Form>
   );
 };

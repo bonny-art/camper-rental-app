@@ -65,7 +65,7 @@ export const TabButtonsContainer = styled.div`
 
   height: 48px;
 
-  border-bottom: 1px solid ${({ theme }) => theme.colors.blackTransparent};
+  border-bottom: 1px solid ${({ theme }) => theme.colors.blackTransp02};
 
   button {
     display: block;
@@ -105,7 +105,7 @@ export const TabsContainer = styled.div`
 export const FormContainer = styled.div`
   width: 448px;
 
-  border: 1px solid ${({ theme }) => theme.colors.blackTransparent};
+  border: 1px solid ${({ theme }) => theme.colors.blackTransp02};
   border-radius: 10px;
   padding: 24px;
 `;
