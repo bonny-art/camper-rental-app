@@ -3,7 +3,6 @@ import { FavoriteButton } from 'components/FavoriteButton/FavoriteButton';
 import React, { useState } from 'react';
 import { campersSelectors } from '../../store/campers/campersSlice';
 import { useSelector } from 'react-redux';
-import { HiOutlineLocationMarker } from 'react-icons/hi';
 import sprite from '../../assets/sprite.svg';
 import { CamperModal } from 'components/CamperModal/CamperModal';
 import {
