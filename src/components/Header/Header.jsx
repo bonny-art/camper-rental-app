@@ -20,7 +20,7 @@ export const Header = () => {
           </Logo>
         </Link>
 
-        <Navigation />
+        <Navigation position="header" />
       </Section>
     </Container>
   );

@@ -121,5 +121,20 @@
       <path stroke-miterlimit="10" stroke-width="2.4" d="M25 20c0 5.523-3.477 9-9 9s-9-3.477-9-9c0-5.927 6.452-13.928 8.431-16.242a.763.763 0 0 1 .57-.263.744.744 0 0 1 .57.263c1.978 2.314 8.43 10.316 8.43 16.242z"/>
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" d="M21.5 20.5A4.5 4.5 0 0 1 17 25"/>
     </symbol>
+
+    <symbol id="flexibility" viewBox="0 0 32 32">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M28 9.333H11M22 22.5H5"/>
+      <path stroke-width=".75" d="M8 9.5a2 2 0 1 1-3.999.001A2 2 0 0 1 8 9.5zM29 22.5a2 2 0 1 1-3.999.001A2 2 0 0 1 29 22.5z"/>
+    </symbol>
+
+    <symbol id="adventure" viewBox="0 0 32 32">
+      <path stroke-width="2.5" d="M2.667 13.334c0-3.944 3.405-7.026 7.33-6.634l5.207.521a7.99 7.99 0 0 0 1.592 0l5.207-.521a6.667 6.667 0 0 1 7.33 6.634v7.999c0 4.791-6.261 6.607-8.825 2.559-1.827-2.885-6.002-2.981-7.96-.184l-.379.541c-2.929 4.184-9.503 2.112-9.503-2.996v-7.921z"/>
+      <path d="M26 13a2 2 0 1 1-3.999.001A2 2 0 0 1 26 13zM23 18a2 2 0 1 1-3.999.001A2 2 0 0 1 23 18z"/>
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10.666 17.967v-5.333M8 15.301h5.333"/>
+    </symbol>
+
+    <symbol id="comfort" viewBox="0 0 32 32">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M16 2.667v4M16 25.333v4M29.333 16h-4M6.667 16h-4M25.428 6.572 22.6 9.4M9.4 22.6l-2.828 2.828M6.572 6.572 9.4 9.4M22.599 22.6l2.828 2.828"/>
+    </symbol>
   </defs>
 </svg>

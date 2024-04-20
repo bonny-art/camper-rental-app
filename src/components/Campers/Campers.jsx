@@ -3,7 +3,9 @@ import { CamperList } from 'components/CamperList/CamperList';
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { campersSelectors } from '../../store/campers/campersSlice';
-import { ButtonBox, Container } from './Campers.styled';
+import { ButtonBox, CampersBox, Container } from './Campers.styled';
+import { scrollDown } from 'helpers/helpers';
+import { Message } from 'components/Message/Message';
 
 export const Campers = () => {
   const allCampers = useSelector(campersSelectors.selectFilteredCampers);
@@ -23,13 +25,6 @@ export const Campers = () => {
       }, 500);
   }, [visibleCampersNumber]);
 
-  const scrollDown = () => {
-    window.scroll({
-      top: window.scrollY + (window.innerHeight - 245),
-      behavior: 'smooth',
-    });
-  };
-
   const handleLoadMore = () => {
     setVisibleCampersNumber(
       prevVisibleCampersNumber => prevVisibleCampersNumber + 4
@@ -40,7 +35,12 @@ export const Campers = () => {
 
   return (
     <Container>
-      <CamperList campers={visibleCampers} />
+      {visibleCampers.length ? (
+        <CamperList campers={visibleCampers} />
+      ) : (
+        <Message>There are no campers for your request</Message>
+      )}
+
       <ButtonBox>
         {canLoadMore && (
           <Button className={'load'} onClick={handleLoadMore}>

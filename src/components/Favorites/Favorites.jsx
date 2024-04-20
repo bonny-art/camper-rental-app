@@ -4,6 +4,8 @@ import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { campersSelectors } from 'store/campers/campersSlice';
 import { ButtonBox, Container, Section } from './Favorites.styled';
+import { scrollDown } from 'helpers/helpers';
+import { Message } from 'components/Message/Message';
 
 export const Favorites = () => {
   const allCampers = useSelector(campersSelectors.selectFavoriteCampers);
@@ -23,13 +25,6 @@ export const Favorites = () => {
       }, 500);
   }, [visibleCampersNumber]);
 
-  const scrollDown = () => {
-    window.scroll({
-      top: window.scrollY + (window.innerHeight - 245),
-      behavior: 'smooth',
-    });
-  };
-
   const handleLoadMore = () => {
     setVisibleCampersNumber(
       prevVisibleCampersNumber => prevVisibleCampersNumber + 4
@@ -41,7 +36,11 @@ export const Favorites = () => {
   return (
     <Container>
       <Section>
-        <CamperList campers={visibleCampers} />
+        {visibleCampers.length ? (
+          <CamperList campers={visibleCampers} />
+        ) : (
+          <Message>You haven't added a camper to your favorites yet</Message>
+        )}
 
         <ButtonBox>
           {canLoadMore && (

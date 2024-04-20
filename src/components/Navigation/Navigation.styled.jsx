@@ -13,15 +13,20 @@ export const Container = styled.div`
     &.active {
       color: ${({ theme }) => theme.colors.orange};
 
-      &::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: -30px;
-        height: 5px;
-        background-color: ${({ theme }) => theme.colors.orange};
-      }
+      ${({ position, theme }) =>
+        position === 'header'
+          ? `
+            &::after {
+              content: '';
+              position: absolute;
+              left: 0;
+              right: 0;
+              bottom: -31px;
+              height: 5px;
+              background-color: ${theme.colors.orange};
+            }
+          `
+          : ''}
     }
   }
 `;
