@@ -5,7 +5,9 @@ export const Container = styled.div`
   flex-direction: column;
   gap: 57px;
 
-  width: 888px;
+  width: 1312px;
+
+  padding-left: 424px;
 `;
 
 export const ButtonBox = styled.div`

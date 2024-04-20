@@ -15,7 +15,9 @@ export const Container = styled.li`
 
 export const ImageBox = styled.div`
   border-radius: 10px;
-  width: 290px;
+  // TODO
+
+  width: ${({ endpoint }) => (endpoint === 'favorites' ? '435px' : '290px')};
   height: 310px;
 
   overflow: hidden;
@@ -34,9 +36,13 @@ export const InfoBox = styled.div`
   flex-direction: column;
   gap: 24px;
 
-  /* width: 526px; */
   flex-grow: 1;
-  max-width: calc(100% - 290px - 24px);
+
+  max-width: calc(
+    100% - ${({ endpoint }) => (endpoint === 'favorites' ? '435px' : '290px')} -
+      24px
+  );
+
   height: 310px;
 `;
 
@@ -49,6 +55,7 @@ export const Head = styled.div`
 
 export const TitleRow = styled.div`
   display: flex;
+  gap: 20px;
   justify-content: space-between;
   align-items: center;
 
@@ -56,6 +63,11 @@ export const TitleRow = styled.div`
     font-weight: 600;
     font-size: 24px;
     line-height: 1.25;
+
+    min-height: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   div {

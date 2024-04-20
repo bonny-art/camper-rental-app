@@ -15,7 +15,7 @@ export const handleGetCampers = (state, { payload }) => {
 };
 
 export const handleAddToFavoriteItems = (state, { payload }) => {
-  state.favoriteItems.push(payload);
+  state.favoriteItems.unshift(payload);
 };
 
 export const handleRemoveFromFavoriteItems = (state, { payload }) => {

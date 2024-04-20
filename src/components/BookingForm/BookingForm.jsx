@@ -43,7 +43,6 @@ export const BookingForm = () => {
   };
 
   const handleSubmit = (values, actions) => {
-    // Обробка даних форми
     console.log(values);
     actions.setSubmitting(false);
 

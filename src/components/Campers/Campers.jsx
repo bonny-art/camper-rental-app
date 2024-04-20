@@ -1,6 +1,6 @@
 import { Button } from 'components/Button/Button';
 import { CamperList } from 'components/CamperList/CamperList';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { campersSelectors } from '../../store/campers/campersSlice';
 import { ButtonBox, Container } from './Campers.styled';
@@ -12,16 +12,28 @@ export const Campers = () => {
 
   const visibleCampers = allCampers.slice(0, visibleCampersNumber);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
+    visibleCampersNumber > 4 &&
+      setTimeout(() => {
+        scrollDown();
+      }, 500);
+  }, [visibleCampersNumber]);
+
+  const scrollDown = () => {
+    window.scroll({
+      top: window.scrollY + (window.innerHeight - 245),
+      behavior: 'smooth',
+    });
+  };
+
   const handleLoadMore = () => {
     setVisibleCampersNumber(
       prevVisibleCampersNumber => prevVisibleCampersNumber + 4
     );
-
-    // TODO See in images HW how to make this
-    window.scrollTo({
-      top: document.documentElement.scrollHeight,
-      behavior: 'smooth',
-    });
   };
 
   const canLoadMore = visibleCampersNumber < allCampers.length;

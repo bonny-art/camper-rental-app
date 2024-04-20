@@ -1,7 +1,10 @@
 import styled from '@emotion/styled';
 
 export const Container = styled.header`
-  min-width: 1352px;
+  position: fixed;
+  z-index: 2;
+
+  width: 100%;
   background-color: ${({ theme }) => theme.colors.lightBlue};
   padding: 20px 0;
 `;

@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 export const Container = styled.div`
-  padding: 100px 0;
+  padding: 114px 0 57px;
 `;
 
 export const Section = styled.div`

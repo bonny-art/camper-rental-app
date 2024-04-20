@@ -22,8 +22,12 @@ import {
   TitleRow,
 } from './CamperCard.styled';
 import { capitalizeFirstLetter } from 'helpers/helpers';
+import { useLocation } from 'react-router-dom';
 
 export const CamperCard = ({ camper }) => {
+  const endpoint = useLocation().pathname.slice(1);
+  console.log('🚀 ~ endpoint:', endpoint);
+
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const {
@@ -59,11 +63,11 @@ export const CamperCard = ({ camper }) => {
   return (
     <>
       <Container key={_id}>
-        <ImageBox>
+        <ImageBox endpoint={endpoint}>
           <img src={gallery[0]} alt={name} />
         </ImageBox>
 
-        <InfoBox>
+        <InfoBox endpoint={endpoint}>
           <Head>
             <TitleRow>
               <h2>{name}</h2>

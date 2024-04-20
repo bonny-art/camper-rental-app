@@ -11,7 +11,6 @@ import {
 
 export const RadioFilter = ({ onTypeChange, isCleared, setIsCleared }) => {
   const [selectedValue, setSelectedValue] = useState('');
-  console.log('🚀 ~ selectedValue:', selectedValue);
 
   useEffect(() => {
     if (isCleared) {
