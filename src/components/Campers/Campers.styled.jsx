@@ -10,6 +10,14 @@ export const Container = styled.div`
   padding-left: 424px;
 `;
 
+export const LoaderBox = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(100vh - 186px);
+`;
+
 export const ButtonBox = styled.div`
   display: flex;
   justify-content: center;

@@ -3,12 +3,14 @@ import { CamperList } from 'components/CamperList/CamperList';
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { campersSelectors } from '../../store/campers/campersSlice';
-import { ButtonBox, Container } from './Campers.styled';
+import { ButtonBox, Container, LoaderBox } from './Campers.styled';
 import { scrollDown } from 'helpers/helpers';
 import { Message } from 'components/Message/Message';
+import { Loader } from 'components/Loader/Loader';
 
 export const Campers = () => {
   const allCampers = useSelector(campersSelectors.selectFilteredCampers);
+  const isLoading = useSelector(campersSelectors.selectIsLoading);
 
   const [visibleCampersNumber, setVisibleCampersNumber] = useState(4);
 
@@ -34,20 +36,30 @@ export const Campers = () => {
   const canLoadMore = visibleCampersNumber < allCampers.length;
 
   return (
-    <Container>
-      {visibleCampers.length ? (
-        <CamperList campers={visibleCampers} />
-      ) : (
-        <Message>There are no campers for your request</Message>
-      )}
+    <>
+      <Container>
+        {isLoading ? (
+          <LoaderBox>
+            <Loader />
+          </LoaderBox>
+        ) : (
+          <>
+            {visibleCampers.length ? (
+              <CamperList campers={visibleCampers} />
+            ) : (
+              <Message>There are no campers for your request</Message>
+            )}
 
-      <ButtonBox>
-        {canLoadMore && (
-          <Button className={'load'} onClick={handleLoadMore}>
-            Load more
-          </Button>
+            <ButtonBox>
+              {canLoadMore && (
+                <Button className={'load'} onClick={handleLoadMore}>
+                  Load more
+                </Button>
+              )}
+            </ButtonBox>
+          </>
         )}
-      </ButtonBox>
-    </Container>
+      </Container>
+    </>
   );
 };
