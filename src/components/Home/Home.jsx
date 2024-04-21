@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   AboutSection,
   AboutTextBox,
@@ -18,6 +18,10 @@ import car02 from '../../assets/car-02.webp';
 import sprite from '../../assets/sprite.svg';
 
 export const Home = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <Container>
       <HeroSection>
