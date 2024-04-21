@@ -12,7 +12,7 @@ import {
 } from './Features.styled';
 
 import sprite from '../../assets/sprite.svg';
-import { capitalizeFirstLetter } from 'helpers/helpers';
+import { capitalizeFirstLetter, getType } from 'helpers/helpers';
 
 export const Features = ({ camper }) => {
   const {
@@ -53,16 +53,6 @@ export const Features = ({ camper }) => {
   const hasGas = gas;
   const hasWater = water;
   const hasMicrowave = microwave > 0;
-
-  var type;
-
-  if (form === 'alcove') {
-    type = 'Alcove';
-  } else if (form === 'fullyIntegrated') {
-    type = 'Fully Integrated';
-  } else if (form === 'panelTruck') {
-    type = 'Van';
-  }
 
   return (
     <Container>
@@ -216,7 +206,7 @@ export const Features = ({ camper }) => {
         <List>
           <Item>
             <p>Form</p>
-            <p>{type}</p>
+            <p>{getType(form)}</p>
           </Item>
           <Item>
             <p>Length</p>

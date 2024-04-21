@@ -23,3 +23,13 @@ export const scrollDown = () => {
     behavior: 'smooth',
   });
 };
+
+export const getType = form => {
+  if (form === 'alcove') {
+    return 'Alcove';
+  } else if (form === 'fullyIntegrated') {
+    return 'Fully Integrated';
+  } else if (form === 'panelTruck') {
+    return 'Van';
+  }
+};
