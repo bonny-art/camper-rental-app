@@ -1,4 +1,4 @@
-<h1 align="center">Застосунок винайму камперів</h1>
+<h1  align="center">Застосунок винайму камперів</h1>
 
 <p>
   Веб-застосунок для винайму камперів пропонує значну цінність для користувачів, які шукають зручний та ефективний спосіб планування подорожей.
@@ -18,22 +18,26 @@
 
 <h6>Детальна інформація: </h6>
 <p>
- Detailed camper descriptions with photos and specifications allow users to dive deeper into the details to make an informed decision.
+ Докладні описи камперів з фотографіями та характеристиками дозволяють користувачам глибше зануритися в деталі, щоб прийняти обґрунтоване рішення.
 </p>
 
-<h6>Ease of booking: </h6>
+<h6>Простота бронювання: </h6>
 <p>
- With the ability to send booking requests directly through the app, the booking process becomes quick and hassle-free.
+ З можливістю надсилати заявки на замовлення прямо через застосунок, процес бронювання стає швидким та безпроблемним.
 </p>
 
-<h6>Convenience and time saving: </h6>
+<h6>Зручність та економія часу: </h6>
 <p>
- Everything from searching to booking can be done in one place, which saves users time and effort.
+ Все, від пошуку до бронювання, можна зробити в одному місці, що значно економить час та зусилля користувачів.
+</p>
+
+<p>
+Ці функції роблять веб-застосунок не лише корисним інструментом для планування подорожей, але й забезпечують приємний досвід користувача, сприяючи поверненню клієнтів.
 </p>
 
 <br/>
 
-<h3>Tools and technologies</h3>
+<h3>Інструменти та технології</h3>
 <div align="center">
 	<code><img width="50" src="https://user-images.githubusercontent.com/25181517/192108372-f71d70ac-7ae6-4c0d-8395-51d8870c2ef0.png" alt="Git" title="Git"/></code>
 	<code><img width="50" src="https://user-images.githubusercontent.com/25181517/192108374-8da61ba1-99ec-41d7-80b8-fb2f7c0a4948.png" alt="GitHub" title="GitHub"/></code>

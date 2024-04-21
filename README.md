@@ -1,34 +1,38 @@
-<h1  align="center">Застосунок винайму камперів</h1>
+<h1  align="center">Campervan rental app</h1>
 
 <p>
-  Веб-застосунок для винайму камперів пропонує значну цінність для користувачів, які шукають зручний та ефективний спосіб планування подорожей.
+  A web-based campervan rental app offers significant value to users looking for a convenient and efficient way to plan their trips.
 </p>
 
 <br/>
 
-<h6>Інтуїтивно зрозумілий каталог: </h6>
+<h6>Intuitive catalog: </h6>
 <p>
-  Користувачі можуть легко переглядати різноманітні кампери, використовуючи фільтри за локацією, типом та обладнанням, що дозволяє їм швидко знайти ідеальний варіант.
+  Users can easily browse through a variety of campers using filters by location, type, and equipment, allowing them to quickly find the perfect fit.
 </p>
 
-<h6>Персоналізація: </h6>
+<h6>Personalization: </h6>
 <p>
-  Можливість додавання камперів до списку улюблених допомагає користувачам зберігати та організовувати варіанти, які їх найбільше зацікавили, для легкого доступу в майбутньому.
+  The ability to add campers to a favorite list helps users save and organize the options they are most interested in for easy access in the future.
 </p>
 
-<h6>Детальна інформація: </h6>
+<h6>Detailed information: </h6>
 <p>
- Докладні описи камперів з фотографіями та характеристиками дозволяють користувачам глибше зануритися в деталі, щоб прийняти обґрунтоване рішення.
+ Detailed campervan descriptions with photos and specifications allow users to dive deeper into the details to make an informed decision.
 </p>
 
-<h6>Простота бронювання: </h6>
+<h6>Ease of booking: </h6>
 <p>
- З можливістю надсилати заявки на замовлення прямо через застосунок, процес бронювання стає швидким та безпроблемним.
+ With the ability to send booking requests directly through the app, the booking process becomes quick and hassle-free.
 </p>
 
-<h6>Зручність та економія часу: </h6>
+<h6>Convenience and time saving: </h6>
 <p>
- Все, від пошуку до бронювання, можна зробити в одному місці, що значно економить час та зусилля користувачів.
+ Everything from searching to booking can be done in one place, which saves users time and effort.
+</p>
+
+<p>
+These features make the web app not only a useful tool for travel planning, but also provide a pleasant user experience, encouraging customer return.
 </p>
 
 <br/>
