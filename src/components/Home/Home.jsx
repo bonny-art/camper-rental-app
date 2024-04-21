@@ -5,14 +5,16 @@ import {
   BenefitsSection,
   Container,
   HeroSection,
-  Icon,
-  Img,
-  ImgCover,
+  Img01,
+  Img02,
+  ImgCover01,
+  ImgCover02,
   TextBox,
 } from './Home.styled';
 import { Button } from 'components/Button/Button';
 import { Link } from 'react-router-dom';
-import car from '../../assets/car.webp';
+import car01 from '../../assets/car-01.webp';
+import car02 from '../../assets/car-02.webp';
 import sprite from '../../assets/sprite.svg';
 
 export const Home = () => {
@@ -36,9 +38,9 @@ export const Home = () => {
           </Link>
         </div>
 
-        <Img src={car} alt="Camper" />
+        <Img01 src={car01} alt="Camper" />
 
-        <ImgCover></ImgCover>
+        <ImgCover01></ImgCover01>
       </HeroSection>
 
       <BenefitsSection>
@@ -70,9 +72,7 @@ export const Home = () => {
       </BenefitsSection>
 
       <AboutSection>
-        <Icon>
-          <use href={`${sprite}#camper-alcove`} />
-        </Icon>
+        <div></div>
 
         <AboutTextBox>
           <h2>Adventure Awaits</h2>
@@ -85,6 +85,10 @@ export const Home = () => {
             <Button className="form">Order</Button>
           </Link>
         </AboutTextBox>
+
+        <Img02 src={car02} alt="Camper" />
+
+        <ImgCover02></ImgCover02>
       </AboutSection>
     </Container>
   );

@@ -49,6 +49,8 @@ export const CLoseButton = styled.div`
   justify-content: center;
   align-items: center;
 
+  cursor: pointer;
+
   width: 32px;
   height: 32px;
 `;

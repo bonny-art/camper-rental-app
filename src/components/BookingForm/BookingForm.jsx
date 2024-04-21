@@ -17,7 +17,7 @@ import {
   Title,
 } from './BookingForm.styled';
 import { Button } from 'components/Button/Button';
-import { toastSuccess } from 'components/Home/notifications';
+import { toastSuccess } from 'helpers/notifications';
 
 const today = () => {
   const now = new Date();

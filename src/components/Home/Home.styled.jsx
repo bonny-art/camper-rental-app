@@ -51,7 +51,7 @@ export const TextBox = styled.div`
   }
 `;
 
-export const Img = styled.img`
+export const Img01 = styled.img`
   position: absolute;
   top: 0;
   left: 765px;
@@ -60,7 +60,7 @@ export const Img = styled.img`
   height: 620px;
 `;
 
-export const ImgCover = styled.div`
+export const ImgCover01 = styled.div`
   position: absolute;
   top: 0;
   left: 0;
@@ -75,8 +75,6 @@ export const ImgCover = styled.div`
     rgba(255, 255, 255, 0.9) 11%,
     #fff 15%
   );
-
-  /* background: linear-gradient(90deg, #fff 0%, #fff 13.59%, #fff 30.86%); */
 `;
 
 export const BenefitsSection = styled.div`
@@ -84,7 +82,7 @@ export const BenefitsSection = styled.div`
   margin-left: auto;
   margin-right: auto;
 
-  padding: 64px 20px;
+  padding: 180px 20px;
 
   ul {
     display: flex;
@@ -123,6 +121,8 @@ export const BenefitsSection = styled.div`
 `;
 
 export const AboutSection = styled.div`
+  position: relative;
+
   width: 1352px;
   margin-left: auto;
   margin-right: auto;
@@ -138,7 +138,7 @@ export const AboutTextBox = styled.div`
   display: flex;
   flex-direction: column;
   align-items: end;
-  gap: 14px;
+  gap: 40px;
 
   width: 646px;
 
@@ -157,14 +157,28 @@ export const AboutTextBox = styled.div`
   }
 `;
 
-export const Icon = styled.svg`
-  width: 420px;
-  height: 294px;
+export const Img02 = styled.img`
+  position: absolute;
+  top: 0;
+  right: 765px;
+  z-index: -2;
 
-  fill: ${({ theme }) => theme.colors.orange};
+  height: 522px;
 `;
 
-export const ButtonBox = styled.div`
-  display: flex;
-  justify-content: center;
+export const ImgCover02 = styled.div`
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+
+  width: 900px;
+  height: 522px;
+
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.9) 11%,
+    #fff 15%
+  );
 `;
