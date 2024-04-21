@@ -18,7 +18,7 @@ export const Campers = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+  }, [visibleCampers]);
 
   useEffect(() => {
     visibleCampersNumber > 4 &&
