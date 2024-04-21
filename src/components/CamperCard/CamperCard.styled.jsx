@@ -37,7 +37,7 @@ export const InfoBox = styled.div`
 
   flex-grow: 1;
 
-  max-width: calc(
+  width: calc(
     100% - ${({ endpoint }) => (endpoint === 'favorites' ? '435px' : '290px')} -
       24px
   );
