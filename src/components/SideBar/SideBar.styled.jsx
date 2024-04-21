@@ -25,7 +25,7 @@ export const FiltersBox = styled.div`
   gap: 64px;
 
   width: 360px;
-  height: calc(100vh - 254px);
+  height: calc(100vh - 279px);
 `;
 
 export const Filters = styled.div`
