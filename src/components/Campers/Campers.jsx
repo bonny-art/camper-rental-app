@@ -11,6 +11,7 @@ import { Loader } from 'components/Loader/Loader';
 export const Campers = () => {
   const allCampers = useSelector(campersSelectors.selectFilteredCampers);
   const isLoading = useSelector(campersSelectors.selectIsLoading);
+  const filter = useSelector(campersSelectors.selectFitlers);
 
   const [visibleCampersNumber, setVisibleCampersNumber] = useState(4);
 
@@ -18,7 +19,7 @@ export const Campers = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [visibleCampers]);
+  }, [filter]);
 
   useEffect(() => {
     visibleCampersNumber > 4 &&

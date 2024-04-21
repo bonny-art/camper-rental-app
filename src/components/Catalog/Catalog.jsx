@@ -7,8 +7,12 @@ export const Catalog = () => {
   return (
     <Container>
       <Section>
-        <SideBar />
-        <Campers />
+        <div>
+          <SideBar />
+        </div>
+        <div>
+          <Campers />
+        </div>
       </Section>
     </Container>
   );

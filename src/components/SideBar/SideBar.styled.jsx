@@ -1,9 +1,11 @@
 import styled from '@emotion/styled';
 
 export const Container = styled.div`
-  position: fixed;
-
   width: 380px;
+
+  position: -webkit-sticky;
+  position: sticky;
+  top: 114px;
 
   overflow-y: auto;
 

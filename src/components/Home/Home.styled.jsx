@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 export const Container = styled.div`
-  padding: 82px 0 0;
+  padding: 0 20px;
 
   overflow-x: hidden;
 `;

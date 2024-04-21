@@ -5,9 +5,7 @@ export const Container = styled.div`
   flex-direction: column;
   gap: 57px;
 
-  width: 1312px;
-
-  padding-left: 424px;
+  width: 888px;
 `;
 
 export const LoaderBox = styled.div`

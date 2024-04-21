@@ -60,6 +60,7 @@ const campersSlice = createSlice({
     selectIsLoading: campersHandlers.handleIsLoading,
     selectError: campersHandlers.handleError,
     selectFavoriteCampers: campersHandlers.handleFavoriteCampers,
+    selectFitlers: campersHandlers.handleFilters,
 
     selectUniqueLocations: createSelector(
       [campersHandlers.handleCampers],

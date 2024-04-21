@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 export const Container = styled.div`
-  padding: 114px 0 57px;
+  padding: 32px 0 57px;
 `;
 
 export const Section = styled.div`
@@ -13,4 +13,6 @@ export const Section = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+  height: 100%;
 `;

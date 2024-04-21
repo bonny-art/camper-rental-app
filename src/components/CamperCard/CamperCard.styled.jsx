@@ -115,6 +115,8 @@ export const Description = styled.p`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+
+  color: ${({ theme }) => theme.colors.gray};
 `;
 
 export const Label = styled.div`
