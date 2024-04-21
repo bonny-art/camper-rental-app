@@ -18,7 +18,7 @@ export const Form = styled.div`
     width: 115px;
 
     svg {
-      fill: ${({ theme }) => theme.colors.white};
+      fill: transparent;
       stroke: ${({ theme }) => theme.colors.black};
     }
   }
@@ -27,7 +27,7 @@ export const Form = styled.div`
     width: 113px;
 
     svg {
-      fill: ${({ theme }) => theme.colors.white};
+      fill: transparent;
       stroke: ${({ theme }) => theme.colors.black};
     }
   }
@@ -36,7 +36,7 @@ export const Form = styled.div`
     width: 112px;
 
     svg {
-      fill: ${({ theme }) => theme.colors.white};
+      fill: transparent;
       stroke: ${({ theme }) => theme.colors.black};
     }
   }
@@ -45,7 +45,7 @@ export const Form = styled.div`
     width: 115px;
 
     svg {
-      fill: ${({ theme }) => theme.colors.white};
+      fill: transparent;
       stroke: ${({ theme }) => theme.colors.black};
     }
   }

@@ -52,7 +52,7 @@ export const MapPinIcon = styled.svg`
   width: 16px;
   height: 16px;
 
-  fill: ${({ theme }) => theme.colors.white};
+  fill: transparent;
   stroke: ${({ theme }) => theme.colors.black};
 `;
 

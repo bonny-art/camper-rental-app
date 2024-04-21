@@ -15,7 +15,7 @@ export const Container = styled.div`
 
     width: 18px;
     height: 20px;
-    fill: ${({ theme }) => theme.colors.white};
+    fill: transparent;
     stroke: ${({ theme }) => theme.colors.black};
   }
 

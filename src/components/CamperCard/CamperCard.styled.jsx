@@ -106,7 +106,7 @@ export const MapPin = styled.svg`
   width: 16px;
   height: 16px;
 
-  fill: ${({ theme }) => theme.colors.white};
+  fill: transparent;
   stroke: ${({ theme }) => theme.colors.black};
 `;
 
@@ -166,6 +166,6 @@ export const IconWithStroke = styled.svg`
   width: 20px;
   height: 20px;
 
-  fill: ${({ theme }) => theme.colors.white};
+  fill: transparent;
   stroke: ${({ theme }) => theme.colors.black};
 `;

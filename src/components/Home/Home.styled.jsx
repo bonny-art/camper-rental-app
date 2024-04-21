@@ -104,7 +104,7 @@ export const BenefitsSection = styled.div`
     width: 64px;
     height: 64px;
 
-    fill: ${({ theme }) => theme.colors.white};
+    fill: transparent;
     stroke: ${({ theme }) => theme.colors.orange};
   }
 
