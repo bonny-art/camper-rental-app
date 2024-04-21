@@ -1,4 +1,4 @@
-<h1  align="center">Застосунок винайму камперів</h1>
+<h1 align="center">Застосунок винайму камперів</h1>
 
 <p>
   Веб-застосунок для винайму камперів пропонує значну цінність для користувачів, які шукають зручний та ефективний спосіб планування подорожей.
@@ -18,17 +18,17 @@
 
 <h6>Детальна інформація: </h6>
 <p>
- Докладні описи камперів з фотографіями та характеристиками дозволяють користувачам глибше зануритися в деталі, щоб прийняти обґрунтоване рішення.
+ Detailed camper descriptions with photos and specifications allow users to dive deeper into the details to make an informed decision.
 </p>
 
-<h6>Простота бронювання: </h6>
+<h6>Ease of booking: </h6>
 <p>
- З можливістю надсилати заявки на замовлення прямо через застосунок, процес бронювання стає швидким та безпроблемним.
+ With the ability to send booking requests directly through the app, the booking process becomes quick and hassle-free.
 </p>
 
-<h6>Зручність та економія часу: </h6>
+<h6>Convenience and time saving: </h6>
 <p>
- Все, від пошуку до бронювання, можна зробити в одному місці, що значно економить час та зусилля користувачів.
+ Everything from searching to booking can be done in one place, which saves users time and effort.
 </p>
 
 <br/>
