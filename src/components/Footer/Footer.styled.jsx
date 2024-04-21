@@ -67,4 +67,8 @@ export const Copyright = styled.div`
     font-size: 15px;
     color: ${({ theme }) => theme.colors.gray};
   }
+
+  a {
+    color: ${({ theme }) => theme.colors.orange};
+  }
 `;

@@ -33,7 +33,24 @@ export const Footer = () => {
       <CopyrightContainer>
         <CopyrightSection>
           <Copyright>
-            <p>Developed by Svitlana Otenko, a student of GoIT</p>
+            <p>
+              Developed by{' '}
+              <a
+                href="https://www.linkedin.com/in/svitlana-otenko/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Svitlana Otenko
+              </a>
+              , a student of{' '}
+              <a
+                href="https://goit.ua/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GoIT School
+              </a>
+            </p>
           </Copyright>
         </CopyrightSection>
       </CopyrightContainer>
