@@ -2,6 +2,8 @@ import styled from '@emotion/styled';
 
 export const Container = styled.div`
   padding: 82px 0 0;
+
+  overflow-x: hidden;
 `;
 
 export const HeroSection = styled.div`
