@@ -12,6 +12,7 @@ import {
   FilterBox,
   FilterTitle,
   Filters,
+  FiltersBox,
   LocationBox,
 } from './SideBar.styled';
 import { mapName } from 'helpers/helpers';
@@ -59,54 +60,56 @@ export const SideBar = () => {
 
   return (
     <Container>
-      <Filters>
-        <LocationBox>
-          <h3>Location</h3>
-          <AutocompleteInput
-            suggestions={suggestions}
-            onLocationSelect={handleLocationSelect}
-            isCleared={isCleared}
-            setIsCleared={setIsCleared}
-          />
-        </LocationBox>
+      <FiltersBox>
+        <Filters>
+          <LocationBox>
+            <h3>Location</h3>
+            <AutocompleteInput
+              suggestions={suggestions}
+              onLocationSelect={handleLocationSelect}
+              isCleared={isCleared}
+              setIsCleared={setIsCleared}
+            />
+          </LocationBox>
 
-        <BigFilterBox>
-          <h3>Filters</h3>
+          <BigFilterBox>
+            <h3>Filters</h3>
+
+            <FilterBox>
+              <FilterTitle>
+                <h4>Vehicle equipment</h4>
+              </FilterTitle>
+
+              <CheckboxFilter
+                onEquipmentChange={handleEquipmentChange}
+                isCleared={isCleared}
+                setIsCleared={setIsCleared}
+              />
+            </FilterBox>
+          </BigFilterBox>
 
           <FilterBox>
             <FilterTitle>
-              <h4>Vehicle equipment</h4>
+              <h4>Vehicle type</h4>
             </FilterTitle>
 
-            <CheckboxFilter
-              onEquipmentChange={handleEquipmentChange}
+            <RadioFilter
+              onTypeChange={handleTypeChange}
               isCleared={isCleared}
               setIsCleared={setIsCleared}
             />
           </FilterBox>
-        </BigFilterBox>
+        </Filters>
 
-        <FilterBox>
-          <FilterTitle>
-            <h4>Vehicle type</h4>
-          </FilterTitle>
-
-          <RadioFilter
-            onTypeChange={handleTypeChange}
-            isCleared={isCleared}
-            setIsCleared={setIsCleared}
-          />
-        </FilterBox>
-      </Filters>
-
-      <ButtonsBox>
-        <Button className="form" onClick={() => handleButtonClick('search')}>
-          Search
-        </Button>
-        <Button className="clear" onClick={() => handleButtonClick('clear')}>
-          Clear
-        </Button>
-      </ButtonsBox>
+        <ButtonsBox>
+          <Button className="form" onClick={() => handleButtonClick('search')}>
+            Search
+          </Button>
+          <Button className="clear" onClick={() => handleButtonClick('clear')}>
+            Clear
+          </Button>
+        </ButtonsBox>
+      </FiltersBox>
     </Container>
   );
 };

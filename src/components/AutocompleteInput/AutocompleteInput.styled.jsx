@@ -24,7 +24,7 @@ export const Container = styled.div`
     border-radius: 10px;
     padding: 18px;
     padding-left: 44px;
-    width: 400px;
+    width: 360px;
     height: 56px;
 
     line-height: 1.25;

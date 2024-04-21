@@ -15,7 +15,6 @@ export const Container = styled.li`
 
 export const ImageBox = styled.div`
   border-radius: 10px;
-  // TODO
 
   width: ${({ endpoint }) => (endpoint === 'favorites' ? '435px' : '290px')};
   height: 310px;

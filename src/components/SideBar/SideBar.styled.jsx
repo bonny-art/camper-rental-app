@@ -2,11 +2,28 @@ import styled from '@emotion/styled';
 
 export const Container = styled.div`
   position: fixed;
+
+  width: 380px;
+
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: ${({ theme }) => theme.colors.scrollbar};
+    border-radius: 7px;
+  }
+`;
+
+export const FiltersBox = styled.div`
   display: flex;
   flex-direction: column;
   gap: 64px;
 
   width: 360px;
+  height: calc(100vh - 254px);
 `;
 
 export const Filters = styled.div`
