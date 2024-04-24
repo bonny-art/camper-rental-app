@@ -6,9 +6,13 @@ export const ModalStyled = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
 
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
   width: 982px;
-  height: 720px;
-  padding: 16px;
+  height: 746px;
+  padding: 40px 16px 40px 40px;
 
   background-color: ${({ theme }) => theme.colors.white};
   border-radius: 20px;
@@ -17,15 +21,13 @@ export const ModalStyled = styled.div`
 `;
 
 export const InerModal = styled.div`
-  position: relative;
-
   display: flex;
   flex-direction: column;
   gap: 44px;
 
-  width: 950px;
+  /* width: 950px; */
   height: 688px;
-  padding: 24px;
+
   padding-right: 16px;
 
   overflow-y: auto;
@@ -40,10 +42,10 @@ export const InerModal = styled.div`
   }
 `;
 
-export const CLoseButton = styled.div`
+export const CLoseButton = styled.button`
   position: absolute;
-  top: 24px;
-  right: 16px;
+  top: 40px;
+  right: 40px;
 
   display: flex;
   justify-content: center;

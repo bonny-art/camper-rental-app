@@ -16,6 +16,7 @@ import {
   TabsContainer,
 } from './CamperModal.styled';
 import sprite from '../../assets/sprite.svg';
+import { TitleInfo } from 'components/TitleInfo/TitleInfo';
 
 export const CamperModal = ({ isModalOpen, closeModal, camper }) => {
   const [activeTab, setActiveTab] = useState('Features');
@@ -29,13 +30,15 @@ export const CamperModal = ({ isModalOpen, closeModal, camper }) => {
       {isModalOpen && (
         <ModalContainer onClose={closeModal}>
           <ModalStyled>
-            <InerModal>
-              <CLoseButton onClick={closeModal}>
-                <CloseIcon>
-                  <use href={`${sprite}#close-btn`} />
-                </CloseIcon>
-              </CLoseButton>
+            <CLoseButton onClick={closeModal}>
+              <CloseIcon>
+                <use href={`${sprite}#close-btn`} />
+              </CloseIcon>
+            </CLoseButton>
 
+            <TitleInfo camper={camper} />
+
+            <InerModal>
               <div>
                 <GeneralInfo camper={camper} />
               </div>
