@@ -12,8 +12,7 @@ import {
 } from './TitleInfo.styled';
 
 export const TitleInfo = ({ camper }) => {
-  const { name, price, rating, reviews, location, description, gallery } =
-    camper;
+  const { name, price, rating, reviews, location } = camper;
 
   return (
     <Info>
@@ -38,7 +37,7 @@ export const TitleInfo = ({ camper }) => {
           </Label>
         </Labels>
 
-        <Price>{`€${price}.00`}</Price>
+        <Price>{`€${price.toFixed(2)}`}</Price>
       </Attributes>
     </Info>
   );

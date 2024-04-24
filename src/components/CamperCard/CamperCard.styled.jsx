@@ -13,7 +13,7 @@ export const Container = styled.li`
   overflow: hidden;
 `;
 
-export const ImageBox = styled.div`
+export const ImageBox = styled.button`
   border-radius: 10px;
 
   width: ${({ endpoint }) => (endpoint === 'favorites' ? '435px' : '290px')};

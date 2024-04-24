@@ -72,7 +72,7 @@ export const CamperCard = ({ camper }) => {
               <h2>{name}</h2>
 
               <div>
-                <p>{`€${price}.00`}</p>
+                <p>{`€${price.toFixed(2)}`}</p>
                 <FavoriteButton camper={camper} isInFavorite={isInFavorite} />
               </div>
             </TitleRow>
